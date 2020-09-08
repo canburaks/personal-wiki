@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>TiddlyResearch</title>
+<title>Kişisel Wiki ve Dijital Bahçe</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -262,6 +262,8 @@ Error message and password prompt
 
 <li>$:/core/ui/EditorToolbar/linkify</li>
 
+<li>$:/core/wiki/title</li>
+
 <li>$:/DefaultTiddlers</li>
 
 <li>$:/favicon.ico</li>
@@ -314,6 +316,8 @@ Error message and password prompt
 
 <li>$:/plugins/tiddlywiki/blog</li>
 
+<li>$:/plugins/tiddlywiki/blog/templates/html-page/page</li>
+
 <li>$:/plugins/tiddlywiki/highlight</li>
 
 <li>$:/plugins/tiddlywiki/jszip</li>
@@ -327,6 +331,8 @@ Error message and password prompt
 <li>$:/plugins/tobibeer/appear/styles</li>
 
 <li>$:/plugins/tobibeer/preview</li>
+
+<li>$:/SiteTitle</li>
 
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/plugins/tiddlywiki/blog</li>
 
@@ -898,7 +904,7 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20200905164037308" modified="20200908061857720" original-plugin-type="asd" readme="" stream-list="" stream-type="default" title="# Kişisel Wiki: Dijital Bahçe" type="text/vnd.tiddlywiki">
+<div created="20200905164037308" modified="20200908144208066" original-plugin-type="asd" readme="" stream-list="" stream-type="default" title="# Kişisel Wiki: Dijital Bahçe" type="text/vnd.tiddlywiki">
 <pre>Bir nevi dijital bahçe ve kişisel wikim. Buradaki notlar bir [[TiddlyWiki|https://tiddlywiki.com/]] versiyonu olan [[TiddlyResearch|https://kebifurai.github.io/TiddlyResearch/]] ile alınmıştır.
 &lt;div class=&quot;Loader&quot;&gt;&lt;/div&gt;
 &lt;style&gt;
@@ -10580,6 +10586,9 @@ Error message and password prompt
 /&gt;
 </pre>
 </div>
+<div created="20200827005102211" modified="20200908144446218" tags="TiddlyResearch" title="$:/core/wiki/title">
+<pre>Kişisel Wiki ve Dijital Bahçe</pre>
+</div>
 <div created="20200427201348300" modified="20200905165851331" title="$:/DefaultTiddlers">
 <pre>[[# Kişisel Wiki: Dijital Bahçe]]</pre>
 </div>
@@ -14075,6 +14084,38 @@ very-muted-foreground: &lt;&lt;colour foreground&gt;&gt;</pre>
     }
 }</pre>
 </div>
+<div created="20200908144246924" modified="20200908144256223" title="$:/plugins/tiddlywiki/blog/templates/html-page/page">
+<pre>\define tv-wikilink-template() posts/$uri_doubleencoded$.html
+\define tv-config-toolbar-icons() no
+\define tv-config-toolbar-text() no
+\define tv-config-toolbar-class() tc-btn-invisible
+`&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;TiddlyWiki&quot; /&gt;
+&lt;meta name=&quot;tiddlywiki-version&quot; content=&quot;`{{$:/core/templates/version}}`&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
+&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; /&gt;
+&lt;meta name=&quot;mobile-web-app-capable&quot; content=&quot;yes&quot;/&gt;
+&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&gt;
+&lt;link id=&quot;faviconLink&quot; rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;static.css&quot;&gt;
+&lt;title&gt;`&lt;$transclude field=&quot;caption&quot;&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$transclude&gt;:Kişisel Wiki ve Dijital Bahçe {{$:/core/wiki/title}}`&lt;/title&gt;
+&lt;/head&gt;
+&lt;body class=&quot;tc-body&quot;&gt;
+`{{$:/StaticBanner||$:/core/templates/html-tiddler}}`
+&lt;section class=&quot;tc-story-river&quot;&gt;
+`&lt;$importvariables filter=&quot;[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]&quot;&gt;
+&lt;$view tiddler=&quot;$:/plugins/tiddlywiki/blog/templates/tiddler&quot; format=&quot;htmlwikified&quot;/&gt;
+&lt;/$importvariables&gt;`
+&lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+`
+</pre>
+</div>
 <div author="Joao Bolila" dependents="" description="Highlight.js syntax highlighting" list="readme usage howto license" name="Highlight" plugin-type="plugin" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.22">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -14727,6 +14768,9 @@ margin-left:0;
     }
 }</pre>
 </div>
+<div created="20200427201336868" modified="20200908143339396" tags="TiddlyResearch" title="$:/SiteTitle">
+<pre>Kişisel Wiki ve Dijital Bahçe</pre>
+</div>
 <div created="20200905165730448" modified="20200905165730448" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/plugins/tiddlywiki/blog">
 <pre>yes</pre>
 </div>
@@ -14853,10 +14897,10 @@ margin-left:0;
 <div created="20200427201909319" modified="20200427202700859" title="$:/state/Inbox" todo_name="">
 <pre></pre>
 </div>
-<div created="20200429142736872" modified="20200905162902233" title="$:/state/notebook-sidebar">
-<pre>yes</pre>
+<div created="20200429142736872" modified="20200908144503151" title="$:/state/notebook-sidebar">
+<pre>no</pre>
 </div>
-<div created="20200429194630535" modified="20200908063833255" title="$:/state/notebook-sidebar-section">
+<div created="20200429194630535" modified="20200908144140986" title="$:/state/notebook-sidebar-section">
 <pre>$:/plugins/nico/notebook/Sidebar/Recent</pre>
 </div>
 <div created="20200902003927956" modified="20200902003927956" title="$:/state/palettemanager/$:/plugins/nico/notebook/palette/tiddler-border">
@@ -14973,8 +15017,8 @@ margin-left:0;
 <div created="20200827142755830" modified="20200830062219206" title="$:/state/plugin-info--896887961-$:/plugins/tobibeer/preview---536113993">
 <pre>contents</pre>
 </div>
-<div created="20200831023601317" modified="20200907151512739" title="$:/state/plugin-info--923845090-$:/plugins/kebi/tiddlyresearch-config">
-<pre>no</pre>
+<div created="20200831023601317" modified="20200908144403494" title="$:/state/plugin-info--923845090-$:/plugins/kebi/tiddlyresearch-config">
+<pre>yes</pre>
 </div>
 <div created="20200828102806619" modified="20200901073715275" title="$:/state/plugin-info-1221418994-$:/plugins/nico/notebook">
 <pre>no</pre>
@@ -15132,11 +15176,11 @@ margin-left:0;
 <div created="20200430084828170" modified="20200902013115677" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
-<div created="20200427201933721" modified="20200907151018476" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Palette</pre>
+<div created="20200427201933721" modified="20200908143807494" title="$:/state/tab--1963855381">
+<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
-<div created="20200831013609123" modified="20200905165829877" title="$:/state/tab--2112689675">
-<pre>$:/core/ui/ControlPanel/Basics</pre>
+<div created="20200831013609123" modified="20200908143433554" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
 <div created="20200901115316514" modified="20200905165726047" title="$:/state/tab--219645345">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Plugins</pre>
@@ -15147,8 +15191,8 @@ margin-left:0;
 <div created="20200427201112997" modified="20200907151816124" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20200831013610906" modified="20200831013732739" title="$:/state/tab--959111941">
-<pre>$:/core/ui/ControlPanel/EditorTypes</pre>
+<div created="20200831013610906" modified="20200908143753434" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
 <div created="20200830004854859" modified="20200830011744346" title="$:/state/tab-1016704987">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
@@ -15156,7 +15200,7 @@ margin-left:0;
 <div created="20200830004131793" modified="20200830004221353" title="$:/state/tab-1332651679">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
-<div created="20200427200938923" modified="20200908061947576" title="$:/state/tab-1749438307">
+<div created="20200427200938923" modified="20200908143827460" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20200829142512280" modified="20200831014550927" title="$:/state/tab-2065006209">
@@ -15189,7 +15233,7 @@ margin-left:0;
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200908062604382" list="[[# Kişisel Wiki: Dijital Bahçe]] Readlinks" modified="20200908063839529" title="$:/StoryList">
+<div created="20200908144313056" list="[[# Kişisel Wiki: Dijital Bahçe]]" modified="20200908144421082" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200827135706741" list="$:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/delete $:/core/ui/Buttons/new-here $:/core/ui/Buttons/edit $:/core/ui/Buttons/close $:/core/ui/Buttons/info $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/fold-bar" modified="20200831120512721" title="$:/tags/ViewToolbar">
