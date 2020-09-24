@@ -904,9 +904,19 @@ Error message and password prompt
 
 <li>CSS Snippets</li>
 
+<li>Deep Compare</li>
+
 <li>Dokümantasyon Programı - CODEDOC</li>
 
 <li>Export</li>
+
+<li>Frost-Blur Effect</li>
+
+<li>Git Komutları</li>
+
+<li>Git Reposu Oluştur</li>
+
+<li>HTML Attribute Remover</li>
 
 <li>JavaScript Snippets</li>
 
@@ -15219,7 +15229,7 @@ margin-left:0;
 <div created="20200429142736872" modified="20200914133914108" title="$:/state/notebook-sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200429194630535" modified="20200924033928118" title="$:/state/notebook-sidebar-section">
+<div created="20200429194630535" modified="20200924131128957" title="$:/state/notebook-sidebar-section">
 <pre>$:/plugins/kebi/tiddlyresearch-sidebar/tiddlers</pre>
 </div>
 <div created="20200902003927956" modified="20200902003927956" title="$:/state/palettemanager/$:/plugins/nico/notebook/palette/tiddler-border">
@@ -15360,8 +15370,8 @@ margin-left:0;
 <div created="20200427202709233" modified="20200430082556911" title="$:/state/projects-and-schedule-643664625">
 <pre>$:/plugins/nico/pm/ui/InboxAndProjects</pre>
 </div>
-<div created="20200427201516404" modified="20200924030714263" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20200427201516404" modified="20200924125334011" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20200827135507770" modified="20200907151020813" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
@@ -15555,7 +15565,7 @@ margin-left:0;
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200924033740734" list="[[Kirazın Tadı: Bir Dut Hayatımı Kurtardı]] [[Zizek ve İdeoloji]] [[Dokümantasyon Programı - CODEDOC]] Codesheet" modified="20200924033946355" title="$:/StoryList">
+<div created="20200924125235398" list="[[Deep Compare]] [[JavaScript Snippets]] Codesheet" modified="20200924132333170" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200827135706741" list="$:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/delete $:/core/ui/Buttons/new-here $:/core/ui/Buttons/edit $:/core/ui/Buttons/close $:/core/ui/Buttons/info $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/fold-bar" modified="20200831120512721" title="$:/tags/ViewToolbar">
@@ -16746,23 +16756,61 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200921024726358" modified="20200921024806667" tags="To-do todo" title="Bussiness Management Ekitap bul">
 <pre></pre>
 </div>
-<div created="20200924025823671" modified="20200924030116381" tags="Tiddler Folder" title="Codesheet" type="text/vnd.tiddlywiki">
+<div created="20200924025823671" modified="20200924132502369" tags="Tiddler Folder" title="Codesheet" type="text/vnd.tiddlywiki">
 <pre>Arşiv amaçlı saklanan code snippetleri.
 
 * [[JavaScript|JavaScript Snippets]]
+** [[Deep Compare|Deep Compare]] Derin Karşılaştırma Yapar.
+** [[HTML Attribute Remover|HTML Attribute Remover]]: String şeklinde verilen HTML'deki tüm attributeları siler.
+
+
 * [[CSS|CSS Snippets]]
+** [[Frost-Effect|Frost-Blur Effect]]
+
 * [[Linux Komutları|Systemd Komutları]]
-* [[React Hooks|React Hooks]]</pre>
+* [[React Hooks|React Hooks]]
+
+* [[Git Komutları|Git Komutları]]
+** [[Yeni Git Reposu Oluştur|Git Reposu Oluştur]]</pre>
 </div>
-<div created="20200921031211505" modified="20200921031303487" tags="Tiddler css code" title="CSS Snippets">
-<pre>!! Frost-Blur Effect
-```css
-/* --&gt; Makes backdrop frost-blur effect on a container */
-.frost-blur { 
-  -webkit-backdrop-filter: blur(40px);
-  backdrop-filter: blur(40px);
+<div created="20200921031211505" modified="20200924131358235" tags="Tiddler css code" title="CSS Snippets">
+<pre>!! Effects
+* [[Frost-Blur Effect|Frost-Blur Effect]]
+</pre>
+</div>
+<div created="20200924131620291" modified="20200924132340958" title="Deep Compare">
+<pre>Array ve objeleri kıyaslayıp derin karşılaştırma yapar.
+
+
+```javascript
+export function isEqualObj(a,b){
+   // Create arrays of property names
+   var aProps = Object.getOwnPropertyNames(a);
+   var bProps = Object.getOwnPropertyNames(b);
+
+   // If number of properties is different,
+   // objects are not equivalent
+   if (aProps.length != bProps.length) {
+       return false;
+   }
+
+   for (var i = 0; i &lt; aProps.length; i++) {
+       var propName = aProps[i];
+
+       // If values of same property are not equal,
+       // objects are not equivalent
+       if (a[propName] !== b[propName]) {
+           return false;
+       }
+   }
+   // If we made it this far, objects
+   // are considered equivalent
+   return true;
 }
-```</pre>
+```
+
+* React kullanırken state değişiminin gerekli olup olmadığına bakılabilir..
+</pre>
 </div>
 <div created="20200911183301215" modified="20200911184320399" tags="Tiddler docs codedoc markdown" title="Dokümantasyon Programı - CODEDOC">
 <pre>Bir dokümantasyon programı olarak çok beğendim [[CODEDOC|https://codedoc.cc/]]'u. Markdown özelleştirmeye izin vermesi ve custom component yapılabilmesi önemli. İleride detaylı kullanacağım
@@ -16793,49 +16841,57 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 Generate Static Website
 &lt;/$button&gt;</pre>
 </div>
-<div created="20200921031635747" modified="20200921031927445" tags="Tiddler code javascript" title="JavaScript Snippets">
-<pre>!! Fast Differ
-A differ function that makes a deep compare.
-
-```javascript
-export function isEqualObj(a,b){
-   // Create arrays of property names
-   var aProps = Object.getOwnPropertyNames(a);
-   var bProps = Object.getOwnPropertyNames(b);
-
-   // If number of properties is different,
-   // objects are not equivalent
-   if (aProps.length != bProps.length) {
-       return false;
-   }
-
-   for (var i = 0; i &lt; aProps.length; i++) {
-       var propName = aProps[i];
-
-       // If values of same property are not equal,
-       // objects are not equivalent
-       if (a[propName] !== b[propName]) {
-           return false;
-       }
-   }
-   // If we made it this far, objects
-   // are considered equivalent
-   return true;
+<div created="20200924131402801" modified="20200924131407326" title="Frost-Blur Effect">
+<pre>```css
+/* --&gt; Makes backdrop frost-blur effect on a container */
+.frost-blur { 
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
 }
-```
+```</pre>
+</div>
+<div created="20200924125302160" modified="20200924130819439" stream-list="" stream-type="default" title="Git Komutları">
+<pre>* [[Yeni Bir Repo Oluştur|Git Reposu Oluştur]]</pre>
+</div>
+<div created="20200924130825742" modified="20200924130832791" title="Git Reposu Oluştur">
+<pre># ~GitHub'da yeni bir repo oluştur. Daha sonra lokal klasöre gidip aşağıdaki komutları gir.
+```bash
+git init
+git add . &amp;&amp; git commit -m &quot;first commit&quot;
+git branch -M master
 
-&lt;br /&gt;
-!! HTML Attribute Remover
-The regex code which removes all attributes from giving HTML string.
+git remote add origin git@github.com:canburaks/repo-ismi.git
+git push -u origin master
+```
+Böylece lokal dosyaların uzak git hesabına gönderilecektir.</pre>
+</div>
+<div created="20200924131947240" modified="20200924132254305" title="HTML Attribute Remover">
+<pre>String şeklinde verilen HTML'deki tüm attributeları siler.
 
 ```js
 let regex = /&lt;\s*([a-z][a-z0-9]*)\s.*?&gt;/gi
 a.replace(regex, '&lt;$1&gt;')
+```
+&lt;br/&gt;
 
-/* Example */
+Örnek olarak a stringine bakalım
+
+```js
 let a = `&lt;div class=&quot;ce-block&quot;&gt;&lt;div class=&quot;ce-block__content&quot;&gt;&lt;h1 class=&quot;ce-header&quot; contenteditable=&quot;false&quot; data-placeholder=&quot;Enter a header&quot;&gt;Add a Title&lt;/h1&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;ce-block&quot;&gt;&lt;div class=&quot;ce-block__content&quot;&gt;&lt;div class=&quot;ae-paragraph cdx-block&quot; contenteditable=&quot;true&quot; data-placeholder=&quot;Title&quot;&gt;Content will be here&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`
+```
+&lt;br/&gt;
+Aşağıdaki komut bize temiz HTML'i verecektir.
+
+```js
 a.replace(regex, '&lt;$1&gt;')
 ```</pre>
+</div>
+<div created="20200921031635747" modified="20200924132408295" tags="Tiddler code javascript" title="JavaScript Snippets">
+<pre>* [[Deep Compare|Deep Compare]]: Array ve Objeleri Kıyaslar.
+
+*  [[HTML Attribute Remover|HTML Attribute Remover]]: String şeklinde verilen HTML'deki tüm attributeları siler.
+
+</pre>
 </div>
 <div created="20200908232454548" modified="20200908232659522" tags="Tiddler happy kirazın-tadı abbas-kiarostami dut" title="Kirazın Tadı: Bir Dut Hayatımı Kurtardı">
 <pre>Abbas Kiyarüstemi'nin Kirazın Tadı filminden bir sahne. İlaç niyetine.
