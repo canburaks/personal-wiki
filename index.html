@@ -256,6 +256,8 @@ Error message and password prompt
 
 <li>$:/config/Navigation/UpdateAddressBar</li>
 
+<li>$:/config/Navigation/UpdateHistory</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
@@ -274,6 +276,8 @@ Error message and password prompt
 
 <li>$:/config/shortcuts-not-mac/remembercz</li>
 
+<li>$:/config/Tiddlers/TitleLinks</li>
+
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit</li>
@@ -283,6 +287,8 @@ Error message and password prompt
 <li>$:/core</li>
 
 <li>$:/core/ui/EditorToolbar/linkify</li>
+
+<li>$:/core/ui/PageStylesheet</li>
 
 <li>$:/core/wiki/title</li>
 
@@ -442,6 +448,8 @@ Error message and password prompt
 
 <li>$:/state/dropdown/keyboardshortcut/transclude-286565879</li>
 
+<li>$:/state/edit/references--1271053915</li>
+
 <li>$:/state/flibbles/relink/tables/Custom-180678945</li>
 
 <li>$:/state/image-picker/system--297445693</li>
@@ -551,6 +559,8 @@ Error message and password prompt
 <li>$:/state/sidebar</li>
 
 <li>$:/state/sq/streams/current-edit-tiddler--1456228637</li>
+
+<li>$:/state/sq/streams/current-edit-tiddler--1594563808</li>
 
 <li>$:/state/sq/streams/current-edit-tiddler-1118763602</li>
 
@@ -954,6 +964,8 @@ Error message and password prompt
 
 <li>Settings</li>
 
+<li>Svelte External Script Loader</li>
+
 <li>Systemd Komutları</li>
 
 <li>Tiddlysport</li>
@@ -1125,8 +1137,11 @@ Error message and password prompt
 <div created="20200926155800258" modified="20200926155800258" title="$:/config/EditorToolbarButtons/Visibility/$:/plugins/tiddlywiki/markdown/EditorToolbar/heading-6">
 <pre>hide</pre>
 </div>
-<div created="20200911183220440" modified="20200921032138654" title="$:/config/Navigation/UpdateAddressBar">
-<pre>permaview</pre>
+<div created="20200911183220440" modified="20200927214318963" title="$:/config/Navigation/UpdateAddressBar">
+<pre>permalink</pre>
+</div>
+<div created="20200927214322919" modified="20200927214322919" title="$:/config/Navigation/UpdateHistory">
+<pre>yes</pre>
 </div>
 <div created="20200831121207148" modified="20200831121207444" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
 <pre>show</pre>
@@ -1154,6 +1169,9 @@ Error message and password prompt
 </div>
 <div created="20200827140618724" modified="20200830054424583" tags="TiddlyResearch" title="$:/config/shortcuts-not-mac/remembercz">
 <pre>ctrl-shift-Comma</pre>
+</div>
+<div created="20200927214339485" modified="20200927214343352" title="$:/config/Tiddlers/TitleLinks">
+<pre>yes</pre>
 </div>
 <div created="20200831120924316" modified="20200831121018476" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close">
 <pre>show</pre>
@@ -10669,6 +10687,22 @@ Error message and password prompt
 /&gt;
 </pre>
 </div>
+<div created="20200927015311027" modified="20200927015311027" title="$:/core/ui/PageStylesheet">
+<pre>\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+
+&lt;$set name=&quot;currentTiddler&quot; value={{$:/language}}&gt;
+
+&lt;$set name=&quot;languageTitle&quot; value={{!!name}}&gt;
+
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/Stylesheet]!has[draft.of]]&quot;&gt;
+&lt;$transclude mode=&quot;block&quot;/&gt;
+&lt;/$list&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+</pre>
+</div>
 <div created="20200827005102211" modified="20200908144446218" tags="TiddlyResearch" title="$:/core/wiki/title">
 <pre>Kişisel Wiki ve Dijital Bahçe</pre>
 </div>
@@ -12055,7 +12089,7 @@ very-muted-foreground: #888888</pre>
     }
 }</pre>
 </div>
-<div created="20200827004041319" modified="20200924031612829" tags="$:/tags/Stylesheet TiddlyResearch" title="$:/plugins/kebi/tiddlyresearch-references/css">
+<div created="20200827004041319" modified="20200927015616068" tags="$:/tags/Stylesheet TiddlyResearch" title="$:/plugins/kebi/tiddlyresearch-references/css">
 <pre>/* CBS*/
 
 /* More Button on Page Editor*/
@@ -15340,6 +15374,9 @@ margin-left:0;
 <div created="20200827140717922" modified="20200827140729534" title="$:/state/dropdown/keyboardshortcut/transclude-286565879">
 <pre>close</pre>
 </div>
+<div created="20200927014050149" modified="20200927014050149" title="$:/state/edit/references--1271053915">
+<pre>show</pre>
+</div>
 <div created="20200830024152336" modified="20200830024152823" title="$:/state/flibbles/relink/tables/Custom-180678945">
 <pre>yes</pre>
 </div>
@@ -15352,7 +15389,7 @@ margin-left:0;
 <div created="20200429142736872" modified="20200914133914108" title="$:/state/notebook-sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200429194630535" modified="20200926165808234" title="$:/state/notebook-sidebar-section">
+<div created="20200429194630535" modified="20200927015822098" title="$:/state/notebook-sidebar-section">
 <pre>$:/plugins/kebi/tiddlyresearch-sidebar/tiddlers</pre>
 </div>
 <div created="20200902003927956" modified="20200902003927956" title="$:/state/palettemanager/$:/plugins/nico/notebook/palette/tiddler-border">
@@ -15493,7 +15530,7 @@ margin-left:0;
 <div created="20200427202709233" modified="20200430082556911" title="$:/state/projects-and-schedule-643664625">
 <pre>$:/plugins/nico/pm/ui/InboxAndProjects</pre>
 </div>
-<div created="20200427201516404" modified="20200926165841143" title="$:/state/showeditpreview">
+<div created="20200427201516404" modified="20200927211134593" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div created="20200827135507770" modified="20200907151020813" title="$:/state/ShowPaletteEditor">
@@ -15504,6 +15541,9 @@ margin-left:0;
 </div>
 <div created="20200827152626360" modified="20200827152626360" title="$:/state/sq/streams/current-edit-tiddler--1456228637">
 <pre>20200827152626357</pre>
+</div>
+<div created="20200927013852124" modified="20200927013852124" title="$:/state/sq/streams/current-edit-tiddler--1594563808">
+<pre>Svelte External Script Loader (Not Tested)</pre>
 </div>
 <div created="20200908061356403" modified="20200908061356403" title="$:/state/sq/streams/current-edit-tiddler-1118763602">
 <pre>20200908061356392</pre>
@@ -15628,13 +15668,13 @@ margin-left:0;
 <div created="20200827160206235" modified="20200827162705519" title="$:/state/sq/streams/visibility/20200827160029619--287707754">
 <pre>hide</pre>
 </div>
-<div created="20200430084828170" modified="20200902013115677" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20200430084828170" modified="20200927015249778" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
-<div created="20200427201933721" modified="20200924025702971" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20200427201933721" modified="20200927214239521" title="$:/state/tab--1963855381">
+<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
-<div created="20200831013609123" modified="20200926001212207" title="$:/state/tab--2112689675">
+<div created="20200831013609123" modified="20200927214112370" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
 <div created="20200901115316514" modified="20200905165726047" title="$:/state/tab--219645345">
@@ -15646,8 +15686,8 @@ margin-left:0;
 <div created="20200427201112997" modified="20200907151816124" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20200831013610906" modified="20200926001214153" title="$:/state/tab--959111941">
-<pre>$:/core/ui/ControlPanel/EditorTypes</pre>
+<div created="20200831013610906" modified="20200927214148229" title="$:/state/tab--959111941">
+<pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
 <div created="20200830004854859" modified="20200830011744346" title="$:/state/tab-1016704987">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
@@ -15655,8 +15695,8 @@ margin-left:0;
 <div created="20200830004131793" modified="20200830004221353" title="$:/state/tab-1332651679">
 <pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
-<div created="20200427200938923" modified="20200926155751756" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200427200938923" modified="20200927214244497" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Settings</pre>
 </div>
 <div created="20200829142512280" modified="20200831014550927" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
@@ -15688,7 +15728,7 @@ margin-left:0;
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200926155747444" list="[[Django Deployments on Digital Ocean]] cbs-stylesheet Tiddlysport [[JavaScript Snippets]] Codesheet" modified="20200926165810016" title="$:/StoryList">
+<div created="20200927214433891" list="Tiddlysport [[Django Deployments on Digital Ocean]] [[Toggle Admin]] Codesheet [[Systemd Komutları]] [[Zizek ve İdeoloji]] [[Kirazın Tadı: Bir Dut Hayatımı Kurtardı]]" modified="20200927214534632" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200827135706741" list="$:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/delete $:/core/ui/Buttons/new-here $:/core/ui/Buttons/edit $:/core/ui/Buttons/close $:/core/ui/Buttons/info $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/fold-bar" modified="20200831120512721" title="$:/tags/ViewToolbar">
@@ -15700,8 +15740,8 @@ margin-left:0;
 <div created="20200830010900436" modified="20200830011102605" title="$:/temp/advanced-search">
 <pre>gett</pre>
 </div>
-<div created="20200430082619375" modified="20200902013114758" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20200430082619375" modified="20200927015241847" title="$:/temp/advancedsearch">
+<pre>style</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -16884,16 +16924,20 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 body.tc-body {background:red;}
 */</pre>
 </div>
-<div created="20200924025823671" modified="20200924132502369" tags="Tiddler Folder" title="Codesheet" type="text/vnd.tiddlywiki">
+<div created="20200924025823671" modified="20200927014305590" tags="Tiddler Folder" title="Codesheet" type="text/vnd.tiddlywiki">
 <pre>Arşiv amaçlı saklanan code snippetleri.
 
 * [[JavaScript|JavaScript Snippets]]
 ** [[Deep Compare|Deep Compare]] Derin Karşılaştırma Yapar.
 ** [[HTML Attribute Remover|HTML Attribute Remover]]: String şeklinde verilen HTML'deki tüm attributeları siler.
+** [[Svelte External Script Loader]]: Script yükleyen Svelte componenti.
 
 
 * [[CSS|CSS Snippets]]
 ** [[Frost-Effect|Frost-Blur Effect]]
+
+* ''Python Snippets''
+** [[Django Deployments on Digital Ocean]]: Django'yu SSH ile Digital Ocean'a yükleme yazısı.
 
 * [[Linux Komutları|Systemd Komutları]]
 * [[React Hooks|React Hooks]]
@@ -16906,7 +16950,7 @@ body.tc-body {background:red;}
 * [[Frost-Blur Effect|Frost-Blur Effect]]
 </pre>
 </div>
-<div created="20200924131620291" modified="20200924132340958" title="Deep Compare">
+<div created="20200924131620291" modified="20200927013355020" title="Deep Compare">
 <pre>Array ve objeleri kıyaslayıp derin karşılaştırma yapar.
 
 
@@ -17096,11 +17140,12 @@ Aşağıdaki komut bize temiz HTML'i verecektir.
 a.replace(regex, '&lt;$1&gt;')
 ```</pre>
 </div>
-<div created="20200921031635747" modified="20200924132408295" tags="Tiddler code javascript" title="JavaScript Snippets">
+<div created="20200921031635747" modified="20200927014051654" tags="Tiddler code javascript" title="JavaScript Snippets">
 <pre>* [[Deep Compare|Deep Compare]]: Array ve Objeleri Kıyaslar.
 
 *  [[HTML Attribute Remover|HTML Attribute Remover]]: String şeklinde verilen HTML'deki tüm attributeları siler.
 
+* [[Svelte External Script Loader]]: Script yükleyen Svelte Componenti.
 </pre>
 </div>
 <div created="20200908232454548" modified="20200908232659522" tags="Tiddler happy kirazın-tadı abbas-kiarostami dut" title="Kirazın Tadı: Bir Dut Hayatımı Kurtardı">
@@ -17207,6 +17252,55 @@ export function useWindowWidth() {
 <pre>* [[Toggle Admin|Toggle Admin]]
 * [[Base CSS|$:/plugins/kebi/tiddlyresearch-references/css]]</pre>
 </div>
+<div created="20200927012846296" modified="20200927014051625" parent="JavaScript Snippets" stream-list="20200927013544713" stream-type="default" tags="code svelte" title="Svelte External Script Loader">
+<pre>Bu yöntemi Stackoverflow'da [[blindfish|https://stackoverflow.com/a/61979865/9351362]] yazmış.
+
+```html
+// LibLoader.svelte
+
+&lt;svelte:head&gt;
+  &lt;script bind:this={script} src={url} /&gt;
+&lt;/svelte:head&gt;
+
+&lt;script&gt;
+  import { onMount, createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
+  export let url;
+  let script;
+
+  onMount(async () =&gt; {
+    script.addEventListener('load', () =&gt; {
+      dispatch('loaded');
+    })
+
+    script.addEventListener('error', (event) =&gt; {
+      console.error(&quot;something went wrong&quot;, event);
+      dispatch('error');
+    });
+  });
+&lt;/script&gt;
+```
+
+&lt;br/&gt;
+
+```html
+// MyComponent.svelte
+
+&lt;LibLoader url=&quot;myExternalLib.js&quot;
+on:loaded=&quot;{onLoaded}&quot; /&gt;
+
+
+&lt;script&gt;
+  import LibLoader from './LibLoader.svelte';
+
+
+  function onLoaded() {
+    myExternalLib.doStuff();
+  }
+&lt;/script&gt;
+```</pre>
+</div>
 <div created="20200921022339169" modified="20200921031157860" tags="Tiddler code linux command" title="Systemd Komutları">
 <pre>!! Başlangıç Uygulamalarını Listele
 ```bash
@@ -17247,7 +17341,7 @@ sudo systemctl disable nginx.service
 <div created="20200921024708353" modified="20200921024721095" tags="Project" title="To-do">
 <pre>&lt;&lt;project&gt;&gt;</pre>
 </div>
-<div created="20200924033751259" modified="20200924033802261" tags="Tiddler" title="Toggle Admin">
+<div created="20200924033751259" modified="20200927214441178" stream-list="" stream-type="default" tags="Tiddler" title="Toggle Admin">
 <pre>&lt;a class=&quot;tc-tiddlylink tc-tiddlylink-resolves&quot; href=&quot;http://stefct-resources.tiddlyspot.com/#%24%3A%2Ftools%2FToggleAdmin&quot; style=&quot;box-sizing: border-box; background: rgb(255, 255, 255); outline: 0px; text-decoration: underline; font-weight: 400; color: rgb(120, 151, 243); user-select: inherit; font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, &amp;quot;Lucida Grande&amp;quot;, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;&quot;&gt;$:/tools/ToggleAdmin&lt;/a&gt;</pre>
 </div>
 <div title="Untitled">
