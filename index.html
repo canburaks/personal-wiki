@@ -643,6 +643,8 @@ Error message and password prompt
 
 <li>Git Reposu Oluştur</li>
 
+<li>Google Sheets API:Read</li>
+
 <li>HTML Attribute Remover</li>
 
 <li>JavaScript Snippets</li>
@@ -11581,7 +11583,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201003080942423" list="[[Kişisel Wiki Sayfama Hoşgeldiniz]]" modified="20201003101832456" title="$:/StoryList">
+<div created="20201003122615207" list="[[Kişisel Wiki Sayfama Hoşgeldiniz]] Codesheet [[Google Sheets API:Read]]" modified="20201003122907678" title="$:/StoryList">
 <pre></pre>
 </div>
 <div bag="default" created="20200502112123171" list="$:/core/ui/SideBarSegments/site-title $:/core/ui/SideBarSegments/site-subtitle $:/core/ui/SideBarSegments/page-controls $:/core/ui/SideBarSegments/search $:/core/ui/SideBarSegments/tabs" modified="20200502112123186" revision="0" title="$:/tags/SideBarSegment" type="text/vnd.tiddlywiki">
@@ -13778,8 +13780,13 @@ div::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); }
 body.tc-body {background:red;}
 */</pre>
 </div>
-<div created="20200924025823671" modified="20201002140148976" tags="Tiddler Folder" title="Codesheet" type="text/vnd.tiddlywiki">
+<div created="20200924025823671" modified="20201003122905878" tags="Tiddler Folder" title="Codesheet" type="text/vnd.tiddlywiki">
 <pre>Arşiv amaçlı saklanan code snippetleri.
+
+* API's
+** Google Sheet
+*** [[Google Sheets API:Read]]
+&lt;br/&gt;
 
 * [[JavaScript|JavaScript Snippets]]
 ** [[Deep Compare|Deep Compare]] Derin Karşılaştırma Yapar.
@@ -13798,7 +13805,7 @@ body.tc-body {background:red;}
 
 &lt;br/&gt;
 
-* ''Python Snippets''
+* [[Python]]
 ** [[Django Deployments on Digital Ocean]]: Django'yu SSH ile Digital Ocean'a yükleme yazısı.
 
 &lt;br/&gt;
@@ -13987,6 +13994,51 @@ git remote add origin git@github.com:canburaks/repo-ismi.git
 git push -u origin master
 ```
 Böylece lokal dosyaların uzak git hesabına gönderilecektir.</pre>
+</div>
+<div created="20201003122947517" modified="20201003123545095" tags="javascript api google-sheets" title="Google Sheets API:Read">
+<pre>```javascript
+const { google } = require(&quot;googleapis&quot;)
+
+
+const sheets = google.sheets({
+    version: 'v4',
+    auth: 'AIz***********************************Q'
+});
+
+
+const SheetsAPI = {
+    sheetId:'**********vsN22p4wRC35cq7vDGb__Ycy-Pi_7Pto34',
+    // fetch remote data
+    fetchSheet: async function(){
+        const params = {
+            spreadsheetId: this.sheetId,
+            range:&quot;Sheet1!A2:H1000&quot;
+        };
+        const res = await sheets.spreadsheets.values.get(params);
+        //console.log(&quot;response&quot;, res.data.values);
+        return res.data.values
+    },
+	transformSingleRecord: function(arr,i){
+		return {
+			title:arr[0],
+			url:arr[1],
+			bilgi:arr[2],
+			description:arr[3],
+			imageUrl:arr[4],
+			topic:arr[5],
+			tag:arr[6],
+			altTag:arr[7]
+		}
+	},
+
+	getSheetData: async function(){
+            const rawdata = await this.fetchSheet()
+            return rawdata.map(row =&gt; this.transformSingleRecord(row))
+	}
+
+}
+
+```</pre>
 </div>
 <div created="20200924131947240" modified="20200924132254305" title="HTML Attribute Remover">
 <pre>String şeklinde verilen HTML'deki tüm attributeları siler.
