@@ -12018,7 +12018,7 @@ html body.tc-body {
 <div created="20201006121457296" modified="20201006125244768" title="$:/state/searchtab-1444756290">
 <pre>$:/.tb/ui/AdvancedSearch/Field</pre>
 </div>
-<div created="20201003081353681" modified="20201118165430248" title="$:/state/showeditpreview">
+<div created="20201003081353681" modified="20201201170425259" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20201002140703060" modified="20201105204832949" title="$:/state/sidebar">
@@ -12060,8 +12060,8 @@ html body.tc-body {
 <div created="20201001215450493" modified="20201001215618468" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20201001215421816" modified="20201130234423914" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20201001215421816" modified="20201201170119848" title="$:/state/tab/sidebar--595412856">
+<pre>Garden</pre>
 </div>
 <div created="20201005212018831" modified="20201105205050795" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
@@ -12069,7 +12069,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201130232849547" list="[[Zizek ve İdeoloji]] .hidden [[Gift Backlink Hakkında (Ömer İlhan'a atılan mail)]] Welcome [[WebFlow Snippets]]" modified="20201201000954461" title="$:/StoryList">
+<div created="20201201150147982" list="Tiddlysport Welcome" modified="20201201170121041" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20201005212140027" list="$:/core/ui/SideBar/Recent $:/core/ui/SideBar/More" modified="20201006120836953" title="$:/tags/SideBar">
@@ -12097,15 +12097,15 @@ html body.tc-body {
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;dat://1c2af42a342d0869e9d9a6e99538d834fc84b9510f2c89145320d122282cff0f/&quot;
+            &quot;text&quot;: &quot;dat://0ba65ea2295f94d453733059b830dca8d9450f9179ae0fe277015e7c07ee8ff0/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;1c2af42a342d0869e9d9a6e99538d834fc84b9510f2c89145320d122282cff0f&quot;
+            &quot;text&quot;: &quot;0ba65ea2295f94d453733059b830dca8d9450f9179ae0fe277015e7c07ee8ff0&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;1c2af42a342d0869e9d9a6e99538d834fc84b9510f2c89145320d122282cff0f&quot;
+            &quot;text&quot;: &quot;0ba65ea2295f94d453733059b830dca8d9450f9179ae0fe277015e7c07ee8ff0&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
@@ -12125,15 +12125,15 @@ html body.tc-body {
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;dat://1c2af42a342d0869e9d9a6e99538d834fc84b9510f2c89145320d122282cff0f&quot;
+            &quot;text&quot;: &quot;dat://0ba65ea2295f94d453733059b830dca8d9450f9179ae0fe277015e7c07ee8ff0&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1366&quot;
+            &quot;text&quot;: &quot;1920&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;768&quot;
+            &quot;text&quot;: &quot;1080&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -16477,7 +16477,7 @@ sudo kill -9 the_pid
 That’s the checklist. Let’s get started.
 </pre>
 </div>
-<div created="20200926000837953" modified="20201130234504284" tags="Tiddler Folder Garden" title="Tiddlysport">
+<div created="20200926000837953" modified="20201201170600987" tags="Tiddler Folder Garden" title="Tiddlysport">
 <pre>Bu başlıkta ~TiddlyWiki hakkındaki bilgiler ve yararlı kaynakları biriktireceğim.
 
 * ''Pluginler''
@@ -16497,6 +16497,14 @@ That’s the checklist. Let’s get started.
 
 * ''TiddlySettings''
 ** Stylesheet Kullanma [[(ref)|https://tiddlywiki.com/static/Using%2520Stylesheets.html]]: Tiddler oluştur ve `$:/tags/Stylesheet` ile etiketle. Örnek: [[cbs-stylesheet]]
+
+* ''Static Export'' (Node)
+```
+tiddlywiki wikipath --rendertiddlers '[!is[system]]' $:/core/templates/static.tiddler.html static text/plain
+tiddlywiki wikipath --rendertiddler $:/core/templates/static.template.html static.html text/plain
+tiddlywiki wikipath --rendertiddler $:/core/templates/static.template.css static/static.css text/plain
+```
+
 
 **Remove `hidden` tagged tiddlers from ''Recent'  Tab'  with:
 `&lt;$macrocall $name=&quot;timeline&quot; subfilter=&quot;!tag[.hidden]&quot; format={{$:/language/RecentChanges/DateFormat}}/&gt;
